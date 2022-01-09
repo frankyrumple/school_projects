@@ -1,2 +1,3 @@
-# school_projects
-Code used to teach game coding at Peninsula College
+# School Project
+Code examples used when teaching game development.
+
