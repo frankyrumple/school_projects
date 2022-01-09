@@ -1,0 +1,6 @@
+__pycache__
+main.build
+main.dist
+main.onefile-build
+/python/matrix_kivy/Matrix.scr
+/python/matrix/Matrix.scr
