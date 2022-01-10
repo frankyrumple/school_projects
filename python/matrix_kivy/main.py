@@ -221,6 +221,11 @@ class MainWidget(Widget):
         self._keyboard = None
     
     def _on_key_down(self, keyboard, keycode, text, modifiers):
+        exit_keys = {
+            "escape", "enter", "spacebar", "tab", "rshift", "shift",
+            "alt", "rctrl", "lctrl", "alt-gr", "delete"
+        }
+
         if keycode[1] == "f":
             # Toggle FPS
             self._fps_control.visible = not self._fps_control.visible
@@ -239,7 +244,7 @@ class MainWidget(Widget):
             MainWidget._num_lines_mult -= 0.1
             self.add_falling_lines()
             pass
-        elif keycode[1] == "escape":
+        elif keycode[1] in exit_keys:
             # Close app
             App.get_running_app().stop()
             pass
